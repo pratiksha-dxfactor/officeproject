@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  payment_type: MyString
+  provider: MyString
+  account_no: MyString
+  expiry: 2023-08-11
+
+two:
+  user: two
+  payment_type: MyString
+  provider: MyString
+  account_no: MyString
+  expiry: 2023-08-11
