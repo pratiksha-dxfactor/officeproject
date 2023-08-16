@@ -1,28 +1,13 @@
-<h1>New User</h1>
+<h1>Users</h1>
 
-<%= form_with model: @user do |form| %>
-  <div>
-    <%= form.label :first_name %><br>
-    <%= form.text_field :first_name %>
-  </div>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <a href="<%= user_path(user) %>">
+        <%= user.first_name%> <%= user.last_name%>
+      </a>
+    </li>
+  <% end %>
+</ul>
 
-  <div>
-    <%= form.label :last_name %><br>
-    <%= form.text_field :last_name %>
-  </div>
-
-  <div>
-    <%= form.label :phone %><br>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div>
-    <%= form.label :password %><br>
-    <%= form.password_field :password %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
-
+<%= link_to "New user", new_user_path %>
